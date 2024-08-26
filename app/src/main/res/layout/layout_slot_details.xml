@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_inset_outline"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLabelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="26dp"
+                android:layout_marginStart="28dp"
+                android:text="Name :- "
+                android:textColor="#242424"
+                android:textSize="14sp"
+                android:fontFamily="@font/markformc"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/tvLabelName"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="26dp"
+                android:textColor="#242424"
+                android:textSize="14sp"
+                android:fontFamily="@font/markformc"
+                tools:text="Miss. Natasha"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLabelDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelName"
+                android:layout_marginTop="26dp"
+                android:layout_marginStart="28dp"
+                android:text="Date :- "
+                android:textColor="#242424"
+                android:textSize="14sp"
+                android:fontFamily="@font/markformc"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/tvLabelDate"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelName"
+                android:layout_marginTop="26dp"
+                android:textColor="#242424"
+                android:textSize="14sp"
+                android:fontFamily="@font/markformc"
+                tools:text="12th March"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLabelTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@id/tvTime"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelName"
+                android:layout_marginTop="26dp"
+                android:text="Timing :- "
+                android:textColor="#242424"
+                android:textSize="14sp"
+                android:fontFamily="@font/markformc"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelName"
+                android:layout_marginEnd="28dp"
+                android:layout_marginTop="26dp"
+                android:textColor="#242424"
+                android:textSize="14sp"
+                android:fontFamily="@font/markformc"
+                tools:text="10 am"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#979797"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:weightSum="4"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_call_delivery_boy"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_message_delivery_boy"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_edit_menu"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_delete_menu"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

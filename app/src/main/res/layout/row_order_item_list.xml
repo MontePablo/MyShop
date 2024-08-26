@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="30dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSerialNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_1"
+        android:fontFamily="@font/markformc"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="6sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_dove_soap"
+        android:fontFamily="@font/markformc"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="6sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvSerialNumber"
+        android:layout_marginStart="40dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvItemWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_150gm"
+        android:fontFamily="@font/markformc"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="6sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvItemName"
+        android:layout_marginStart="40dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvItemNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_1pp"
+        android:fontFamily="@font/markformc"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="6sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvItemAmount"
+        android:layout_marginEnd="40dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvItemAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_50"
+        android:fontFamily="@font/markformc"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="6sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

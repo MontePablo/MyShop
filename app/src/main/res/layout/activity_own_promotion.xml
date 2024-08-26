@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDesc"
+            android:layout_width="match_parent"
+            android:layout_height="158dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/bg_hire_delivery_boy"
+            android:elevation="2dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/back_arrow"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="26dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMyShopLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_logo_my_shop_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="16dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivOwnPromotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_own_promotion"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="25dp"
+                app:layout_constraintTop_toBottomOf="@id/ivMyShopLogo"
+                android:layout_marginTop="40dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLaunchNewProduct"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_create_own_promotion"
+                android:fontFamily="@font/markformc"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="4sp"
+                app:layout_constraintTop_toBottomOf="@id/ivMyShopLogo"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toEndOf="@id/ivOwnPromotion"
+                android:layout_marginStart="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="24dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPromotionPaymentDesc"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:backgroundTint="#00a550"
+            android:background="@drawable/bg_delivery_boy_row"
+            app:layout_constraintTop_toBottomOf="@id/clDesc"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="4dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_own_promotion_payment_desc"
+                android:fontFamily="@font/markformc_medium"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:lineSpacingExtra="6sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="19dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="10dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clOwnPromotionDesc"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:background="@drawable/bg_delivery_boy_row"
+            app:layout_constraintTop_toBottomOf="@id/clPromotionPaymentDesc"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="4dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clCamera"
+                android:layout_width="89dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_own_promotion_camera"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="28dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_image_picker"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSelectedImage"
+                android:layout_width="89dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_own_promotion_camera"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="28dp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSelectedImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/ic_item_placeholder"
+                    android:layout_centerInParent="true"
+                    app:layout_constraintDimensionRatio="1:1"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivClearImage"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_close"
+                    app:layout_constraintBottom_toBottomOf="@id/ivSelectedImage"
+                    app:layout_constraintEnd_toEndOf="@id/ivSelectedImage"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvEventTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/lbl_own_promotion_event_title"
+                android:textColorHint="@color/hint_color"
+                style="@style/Widget.Design.TextInputLayout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/clCamera"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEventTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/markformc_medium"
+                    android:textColorHint="@color/secondary_text_color"
+                    android:textStyle="normal"
+                    android:textSize="14sp"
+                    android:textColor="#292929"
+                    android:lineSpacingExtra="4sp"
+                    android:inputType="text"
+                    android:paddingBottom="16dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEventContent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_event_title"
+                android:hint="Enter content here"
+                android:textColorHint="#292929"
+                android:gravity="top|left"
+                android:paddingStart="9dp"
+                android:paddingEnd="11dp"
+                android:paddingTop="5dp"
+                android:textCursorDrawable="@null"
+                android:fontFamily="@font/markformc"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="6sp"
+                android:maxLength="50"
+                app:layout_constraintTop_toBottomOf="@id/tvEventTitle"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toEndOf="@id/clCamera"
+                android:layout_marginStart="7dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="11dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="28dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalWords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="50"
+                android:text="0"
+                android:textAllCaps="false"
+                android:fontFamily="@font/markformc"
+                android:textStyle="normal"
+                android:textSize="10sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="8sp"
+                android:gravity="end"
+                app:layout_constraintBottom_toBottomOf="@id/tvTotalWordsText"
+                app:layout_constraintEnd_toStartOf="@id/tvTotalWordsText"
+                android:layout_marginEnd="2dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalWordsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_words"
+                android:textAllCaps="false"
+                android:fontFamily="@font/markformc"
+                android:textStyle="normal"
+                android:textSize="10sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="8sp"
+                android:gravity="end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="7dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="23dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPreview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_preview"
+            android:textAllCaps="false"
+            android:fontFamily="@font/markformc_medium"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:textColor="#eb008b"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/clOwnPromotionDesc"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPreview"
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:background="@drawable/bg_own_promotion_preview"
+            app:layout_constraintTop_toBottomOf="@id/tvPreview"
+            app:layout_constraintBottom_toTopOf="@id/buttonDone"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="4dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPreviewImage"
+                android:layout_width="81dp"
+                android:layout_height="81dp"
+                android:background="@drawable/bg_own_promotion_preview_image"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPreviewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Get special disc upto 25%"
+                android:textAllCaps="false"
+                android:fontFamily="@font/markformc_medium"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="4sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@id/ivPreviewImage"
+                android:layout_marginStart="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="30dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPreviewContent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                tools:text="On this festival season enjoy food with your family"
+                android:textAllCaps="false"
+                android:fontFamily="@font/markformc"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="6sp"
+                app:layout_constraintStart_toEndOf="@id/ivPreviewImage"
+                android:layout_marginStart="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintTop_toBottomOf="@id/tvPreviewTitle"
+                android:layout_marginTop="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="10dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_done"
+            android:textAllCaps="false"
+            android:fontFamily="@font/markformc_medium"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:paddingBottom="10dp"
+            app:cornerRadius="8dp"
+            android:backgroundTint="@color/accent_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="85dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="85dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="23dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

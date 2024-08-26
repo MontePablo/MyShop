@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="serviceType"
+            type="com.fststep.myshop.registration.model.ServiceType" />
+
+        <import type="android.view.View"/>
+        <import type="com.fststep.myshop.registration.model.ServiceType" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="19dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="16dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="128dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="18dp"
+                app:srcCompat="@drawable/ic_logo_my_shop"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_registration_desc"
+                android:textSize="14sp"
+                android:minHeight="41dp"
+                android:textColor="@color/accent_blue"
+                android:fontFamily="@font/markformc"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginTop="16dp"
+                />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/parentScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="35dp"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="18dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/markformc"
+                        android:hint="@string/lbl_name"
+                        android:textColorHint="@color/hint_color"
+                        style="@style/Widget.Design.TextInputLayout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/error"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/markformc"
+                            android:textColorHint="@color/secondary_text_color"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="16sp"
+                            android:inputType="text"
+                            android:paddingBottom="16dp"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlMobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/markformc"
+                        android:hint="@string/lbl_mobile_number"
+                        android:textColorHint="@color/hint_color"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.Design.TextInputLayout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tlName"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/error"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etMobileNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/markformc"
+                            android:textColorHint="@color/secondary_text_color"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="16sp"
+                            android:inputType="phone"
+                            android:paddingBottom="16dp"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlBusinessName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/markformc"
+                        android:hint="@string/lbl_business_name"
+                        android:textColorHint="@color/hint_color"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.Design.TextInputLayout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tlMobileNumber"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBusinessName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/markformc"
+                            android:textColorHint="@color/secondary_text_color"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="16sp"
+                            android:inputType="text"
+                            android:paddingBottom="16dp"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutBusinessCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tlBusinessName"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_business_category"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            style="@style/TextView.InputLabel"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinnerBusinessCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.AppCompat.Spinner.Underlined"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutTypeOfBusiness"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/layoutBusinessCategory"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_type_of_business"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            style="@style/TextView.InputLabel"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinnerTypeOfBusiness"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.AppCompat.Spinner.Underlined"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutDelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/layoutTypeOfBusiness"
+                        android:visibility="@{serviceType == ServiceType.GOODS_DELIVERY ? View.VISIBLE : View.GONE}"
+                        >
+
+                        <TextView
+                            android:id="@+id/labelDelivery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_delivery"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            style="@style/TextView.InputLabel"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinnerDelivery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.AppCompat.Spinner.Underlined"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutServicePlacePhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/layoutDelivery"
+                        android:visibility="@{serviceType == ServiceType.PHONE ? View.VISIBLE : View.GONE}"
+                        >
+
+                        <TextView
+                            android:id="@+id/labelServicePlacePhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_service_place"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            style="@style/TextView.InputLabel"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinnerServicePlacePhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.AppCompat.Spinner.Underlined"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutServicePlaceBooking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/layoutServicePlacePhone"
+                        android:visibility="@{serviceType == ServiceType.BOOKING ? View.VISIBLE : View.GONE}"
+                        >
+
+                        <TextView
+                            android:id="@+id/labelServicePlaceBooking"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_service_place"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            style="@style/TextView.InputLabel"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinnerServicePlaceBooking"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.AppCompat.Spinner.Underlined"
+                            />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/markformc"
+                        android:hint="@string/lbl_define_the_area"
+                        android:textColorHint="@color/hint_color"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.Design.TextInputLayout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/layoutServicePlaceBooking"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/ic_info"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/error"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/markformc"
+                            android:textColorHint="@color/secondary_text_color"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="16sp"
+                            android:inputType="numberDecimal"
+                            android:paddingBottom="16dp"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/markformc"
+                        android:hint="@string/lbl_password"
+                        android:textColorHint="@color/hint_color"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.Design.TextInputLayout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tlArea"
+                        app:endIconMode="password_toggle"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/error"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/markformc"
+                            android:textColorHint="@color/secondary_text_color"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="16sp"
+                            android:inputType="textPassword"
+                            android:paddingBottom="16dp"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/markformc"
+                        android:hint="@string/lbl_confirm_password"
+                        android:textColorHint="@color/hint_color"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.Design.TextInputLayout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tlPassword"
+                        app:endIconMode="password_toggle"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/error"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etConfirmPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/markformc"
+                            android:textColorHint="@color/secondary_text_color"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="16sp"
+                            android:inputType="textPassword"
+                            android:paddingBottom="16dp"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlReferralCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/markformc"
+                        android:hint="@string/lbl_referral_code_optional"
+                        android:textColorHint="@color/hint_color"
+                        android:layout_marginTop="0dp"
+                        style="@style/Widget.Design.TextInputLayout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tlConfirmPassword"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etReferralCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/markformc"
+                            android:textColorHint="@color/secondary_text_color"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="16sp"
+                            android:inputType="text"
+                            android:paddingBottom="16dp"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonNext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_next"
+                        android:fontFamily="@font/markformc_medium"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginEnd="50dp"
+                        android:textColor="@color/white"
+                        android:padding="10dp"
+                        app:backgroundTint="@color/accent_blue"
+                        app:cornerRadius="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tlReferralCode"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="24dp"
+                        android:layout_marginTop="95dp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

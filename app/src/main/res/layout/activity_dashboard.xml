@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTab"
+            android:layout_width="match_parent"
+            android:layout_height="109dp"
+            android:background="@drawable/bg_hire_delivery_boy"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:elevation="2dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHamburger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_hamburger"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMyShopLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_logo_my_shop_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="16dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvShopStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_active"
+                android:fontFamily="@font/markformc"
+                android:textStyle="normal"
+                android:textSize="10sp"
+                android:textColor="#404042"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="20dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivShopStatusActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_shop_status_active"
+                app:layout_constraintEnd_toEndOf="@id/tvShopStatus"
+                app:layout_constraintStart_toStartOf="@id/tvShopStatus"
+                app:layout_constraintTop_toBottomOf="@id/tvShopStatus"
+                android:layout_marginTop="3dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivShopStatusDeactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_shop_status_deactive"
+                app:layout_constraintEnd_toEndOf="@id/tvShopStatus"
+                app:layout_constraintStart_toStartOf="@id/tvShopStatus"
+                app:layout_constraintTop_toBottomOf="@id/tvShopStatus"
+                android:layout_marginTop="3dp"
+                android:visibility="gone"
+                />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tlDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabSelectedTextColor="@color/text_tab"
+                app:tabTextAppearance="@style/TabLayoutTextAppearance"
+                app:tabIndicatorColor="@color/tab_indicator_color"
+                app:tabIndicatorHeight="3dp"
+                app:tabGravity="start"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/clTab"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutWine"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/clTab"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardWineWelcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_margin="4dp"
+                app:contentPaddingLeft="21dp"
+                app:contentPaddingRight="21dp"
+                app:contentPaddingBottom="18dp"
+                app:cardCornerRadius="8dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="@string/lbl_welcome_on_board"
+                    android:textAlignment="center"
+                    android:textColor="#292929"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/markformc_medium"
+                    />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="@string/lbl_wine_desc"
+                        android:textAlignment="center"
+                        android:textColor="#292929"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/markformc"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvWineLink"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="@string/lbl_wine_group_link"
+                        android:textAlignment="center"
+                        android:textColor="#00a550"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/markformc"
+                        />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardWineCounter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardWineWelcome"
+                android:layout_marginTop="17dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                app:contentPaddingLeft="21dp"
+                app:contentPaddingRight="21dp"
+                app:contentPaddingBottom="18dp"
+                app:cardCornerRadius="8dp"
+                >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="@string/lbl_counter_heading"
+                    android:textAlignment="center"
+                    android:textColor="#292929"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/markformc_medium"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#d04127"
+                    android:text="5000"
+                    android:textSize="72sp"
+                    android:fontFamily="@font/markformc_medium"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#292929"
+                    android:text="These all can be your customer"
+                    android:textSize="14sp"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/markformc"
+                    />
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/vHamburgerBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/hamburger_background"
+            android:elevation="4dp"
+            android:visibility="gone"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clHamburgerMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="86dp"
+            android:elevation="6dp"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHamburgerMyShopLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_hamburger_my_shop_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="19dp"
+                />
+
+            <View
+                android:id="@+id/vLineLogo"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                app:layout_constraintTop_toBottomOf="@id/ivHamburgerMyShopLogo"
+                android:layout_marginTop="25dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPromotion"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/lbl_promote_your_shop"
+                android:fontFamily="@font/markformc_medium"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="4sp"
+                android:paddingTop="18dp"
+                android:paddingStart="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vLineLogo"
+                app:layout_constraintBottom_toTopOf="@id/vLinePromotion"
+                />
+
+            <View
+                android:id="@+id/vLinePromotion"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                app:layout_constraintTop_toBottomOf="@id/vLineLogo"
+                android:layout_marginTop="53dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMyAdvertisement"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/lbl_my_advertisement"
+                android:fontFamily="@font/markformc_medium"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="4sp"
+                android:paddingStart="30dp"
+                android:paddingTop="13dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vLinePromotion"
+                app:layout_constraintBottom_toTopOf="@id/vLineMyAdvertisement"
+                />
+
+            <View
+                android:id="@+id/vLineMyAdvertisement"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                app:layout_constraintTop_toBottomOf="@id/vLinePromotion"
+                android:layout_marginTop="48dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMyProfile"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/lbl_my_profile"
+                android:fontFamily="@font/markformc_medium"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="4sp"
+                android:paddingStart="30dp"
+                android:paddingTop="13dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vLineMyAdvertisement"
+                app:layout_constraintBottom_toTopOf="@id/vLineMyProfile"
+                />
+
+            <View
+                android:id="@+id/vLineMyProfile"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                app:layout_constraintTop_toBottomOf="@id/vLineMyAdvertisement"
+                android:layout_marginTop="48dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRewards"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/lbl_my_rewards"
+                android:fontFamily="@font/markformc_medium"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="4sp"
+                android:paddingStart="30dp"
+                android:paddingTop="13dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vLineMyProfile"
+                app:layout_constraintBottom_toTopOf="@id/vLineMyRewards"
+                />
+
+            <View
+                android:id="@+id/vLineMyRewards"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                app:layout_constraintTop_toBottomOf="@id/vLineMyProfile"
+                android:layout_marginTop="48dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSettings"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/lbl_settings"
+                android:fontFamily="@font/markformc_medium"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="4sp"
+                android:paddingStart="30dp"
+                android:paddingTop="13dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vLineMyRewards"
+                app:layout_constraintBottom_toTopOf="@id/vLineSettings"
+                />
+
+            <View
+                android:id="@+id/vLineSettings"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                app:layout_constraintTop_toBottomOf="@id/vLineMyRewards"
+                android:layout_marginTop="48dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/lbl_contact_us"
+                android:fontFamily="@font/markformc_medium"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="4sp"
+                android:paddingStart="30dp"
+                android:paddingTop="13dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vLineSettings"
+                app:layout_constraintBottom_toTopOf="@id/vLineContactUs"
+                />
+
+            <View
+                android:id="@+id/vLineContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                app:layout_constraintTop_toBottomOf="@id/vLineSettings"
+                android:layout_marginTop="48dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvActiveCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/lbl_active_customer"
+                android:fontFamily="@font/markformc_medium"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="4sp"
+                android:paddingStart="30dp"
+                android:paddingTop="13dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vLineContactUs"
+                app:layout_constraintBottom_toTopOf="@id/vLineActiveCustomer"
+                />
+
+            <View
+                android:id="@+id/vLineActiveCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                app:layout_constraintTop_toBottomOf="@id/vLineContactUs"
+                android:layout_marginTop="48dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLogout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/lbl_logout"
+                android:fontFamily="@font/markformc_medium"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="4sp"
+                android:paddingStart="30dp"
+                android:paddingTop="13dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vLineActiveCustomer"
+                app:layout_constraintBottom_toTopOf="@id/vLineLogout"
+                />
+
+            <View
+                android:id="@+id/vLineLogout"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                app:layout_constraintTop_toBottomOf="@id/vLineActiveCustomer"
+                android:layout_marginTop="48dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_version"
+                android:fontFamily="@font/markformc"
+                android:textStyle="normal"
+                android:textSize="11sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="7sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vLineLogout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
